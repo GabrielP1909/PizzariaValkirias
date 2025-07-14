@@ -1,0 +1,736 @@
+/* Variáveis CSS para Cores */
+:root {
+    --primary-color: #E74C3C; /* Vermelho sutil para destaque (único toque de cor, usado com moderação) */
+    --secondary-color: #BBBBBB; /* Cinza claro para acentos secundários, substituindo o verde */
+    --dark-bg: #1A1A1A; /* Preto profundo para fundos e texto principal */
+    --light-bg: #F5F5F5; /* Branco muito claro para seções de fundo */
+    --text-dark: #333333; /* Cinza escuro para legibilidade */
+    --text-light: #FFFFFF; /* Branco puro para fundos escuros */
+    --border-color: #555555; /* Cinza escuro para bordas */
+    --footer-bg: #0A0A0A; /* Preto ainda mais profundo para o rodapé */
+    --header-bg: #0A0A0A; /* Preto ainda mais profundo para o cabeçalho */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Lora', serif; /* Fonte para textos gerais */
+    line-height: 1.6;
+    color: var(--text-light); /* Cor do texto padrão para o corpo, que será predominantemente preto */
+    background-color: var(--dark-bg); /* Fundo geral preto dominante */
+    padding-top: 70px; /* MODIFICADO: Reduzido de 90px para 70px */
+}
+
+/* Adicionado para rolagem suave e para compensar o cabeçalho fixo */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* MODIFICADO: Reduzido de 90px para 70px */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light); /* Links em branco */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color); /* Hover de link com o vermelho sutil */
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif; /* Fonte elegante para títulos */
+    margin-bottom: 15px;
+    color: var(--text-light); /* Títulos em branco */
+}
+
+p {
+    margin-bottom: 15px;
+    color: var(--text-light); /* Parágrafos em branco */
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color); /* Botões em vermelho sutil */
+    color: var(--text-light); /* Texto do botão em branco */
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #C0392B; /* Tom mais escuro do vermelho no hover */
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-light); /* Texto do botão outline em branco */
+    border: 2px solid var(--text-light); /* Borda do botão outline em branco */
+}
+
+.btn-outline:hover {
+    background-color: var(--text-light); /* Hover do botão outline em branco */
+    color: var(--dark-bg); /* Texto do botão outline no hover em preto */
+    transform: translateY(-3px);
+}
+
+/* Seções */
+section {
+    padding: 80px 0; /* Mantém o padding vertical padrão para outras seções */
+}
+
+.section-heading {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 15px;
+    color: var(--text-light); /* Títulos de seção em branco */
+    padding-top: 20px; /* MODIFICADO: Reduzido de 40px para 20px */
+    margin-top: -20px; /* MODIFICADO: Reduzido de -40px para -20px */
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color); /* Linha de destaque em vermelho sutil */
+    border-radius: 2px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--header-bg); /* Fundo do cabeçalho em preto profundo */
+    color: var(--text-light); /* Texto do cabeçalho em branco */
+    padding: 10px 0; /* MODIFICADO: Reduzido de 15px para 10px */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o cabeçalho esteja sempre no topo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra mais escura */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em; /* MODIFICADO: Reduzido de 2.5em para 2em */
+    font-weight: bold;
+    color: var(--text-light); /* Logo em branco */
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover {
+    color: var(--primary-color); /* Hover do logo em vermelho sutil */
+}
+
+/* Estilo para a pequena imagem da logo */
+.logo .small-logo {
+    height: 60px; /* Define a altura fixa */
+    width: auto; /* A largura se ajustará automaticamente para manter a proporção */
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: var(--text-light); /* Links de navegação em branco */
+    font-weight: 500;
+    font-size: 1em; /* MODIFICADO: Reduzido de 1.1em para 1em */
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color); /* Linha de destaque do link em vermelho sutil */
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* --- Hero Section (index.html) --- */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x1080?text=Pizza+Napolitana+Fundo') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light); /* Texto do hero em branco */
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Escurece a imagem com preto mais intenso */
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4.8em;
+    color: var(--text-light); /* Título do hero em branco */
+    margin-bottom: 25px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    color: var(--text-light); /* Parágrafo do hero em branco */
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+.hero-buttons .btn {
+    margin: 0 15px;
+    min-width: 180px;
+}
+
+/* --- About Preview Section (index.html) --- */
+.about-preview-section {
+    background-color: var(--dark-bg); /* Fundo preto */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    color: var(--text-light); /* Texto em branco */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra mais escura */
+}
+
+/* --- Featured Pizzas Section (index.html) --- */
+.featured-pizzas-section {
+    background-color: var(--dark-bg); /* Fundo preto */
+}
+
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.pizza-item {
+    background-color: var(--light-bg); /* Fundo branco para os itens de pizza */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra mais escura */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pizza-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5); /* Sombra mais escura no hover */
+}
+
+.pizza-item img {
+    width: 100%;
+    height: 280px; /* Altura fixa para imagens */
+    object-fit: cover;
+    display: block;
+}
+
+.pizza-item h3 {
+    font-size: 2em;
+    margin: 25px 0 10px;
+    color: var(--dark-bg); /* Título da pizza em preto */
+}
+
+.pizza-item p {
+    font-size: 1.05em;
+    color: var(--text-dark); /* Texto da descrição em cinza escuro */
+    padding: 0 25px;
+    margin-bottom: 20px;
+}
+
+.pizza-price {
+    display: block;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--primary-color); /* Preço em vermelho sutil */
+    margin-bottom: 25px;
+}
+
+/* --- Page Header for Menu & About & Contact (Removido, mas mantido para referência se quiser usar como sub-cabeçalho) --- */
+.page-header-section {
+    background: url('https://via.placeholder.com/1920x400?text=Fundo+Menu+Pizzaria') no-repeat center center/cover;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    z-index: 1;
+    margin-top: 0; /* MODIFICADO: Removido o margin-top, pois o padding-top do body já o empurra */
+}
+
+.page-header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+}
+
+.page-header-section h1 {
+    font-size: 4.5em;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.page-header-section p {
+    font-size: 1.3em;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* --- About Section (sobre.html) --- */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra mais escura */
+}
+
+.about-content h3 {
+    font-size: 2.2em;
+    color: var(--text-light); /* Títulos em branco */
+    margin-top: 30px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    color: var(--text-light); /* Texto em branco */
+    margin-bottom: 20px;
+}
+
+.about-content ul li {
+    color: var(--text-light); /* Texto da lista em branco */
+}
+
+.about-content ul li i {
+    color: var(--primary-color); /* Ícones da lista em vermelho sutil */
+}
+
+/* --- Contact Section (contato.html) --- */
+.contact-info {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-info p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: var(--text-light); /* Texto de contato em branco */
+}
+
+.contact-info p i {
+    color: var(--primary-color); /* Ícones de contato em vermelho sutil */
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--light-bg); /* Fundo do formulário em branco */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra mais escura */
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--dark-bg); /* Labels do formulário em preto */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--dark-bg); /* Texto dos inputs em preto */
+    background-color: var(--text-light); /* Fundo dos inputs em branco */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+
+/* --- Menu Categories Section (menu.html) --- */
+.menu-categories-section {
+    background-color: var(--dark-bg);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+}
+
+.menu-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.item-details {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: var(--dark-bg);
+}
+
+.item-details p {
+    font-size: 1em;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.item-price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.menu-list-simple {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.list-item {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+.list-item:hover {
+    transform: translateY(-7px);
+}
+
+.list-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: var(--dark-bg);
+}
+
+.list-item p {
+    font-size: 0.95em;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--footer-bg); /* Fundo do rodapé em preto profundo */
+    color: var(--text-light); /* Texto do rodapé em branco */
+    padding: 60px 0 30px;
+    font-size: 0.95em;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--text-light); /* Logo do rodapé em branco */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.footer-col .footer-description {
+    color: #BBBBBB; /* Descrição do rodapé em cinza claro */
+    margin-bottom: 25px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    color: #BBBBBB; /* Texto de contato do rodapé em cinza claro */
+}
+
+.footer-contact p i {
+    color: var(--primary-color); /* Ícones de contato do rodapé em vermelho sutil */
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    color: var(--text-light); /* Ícones sociais em branco */
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.08); /* Fundo dos ícones sociais com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color); /* Hover dos ícones sociais em vermelho sutil */
+    color: var(--text-light); /* Cor do ícone social no hover em branco */
+}
+
+.footer-heading {
+    font-size: 1.6em;
+    color: var(--text-light); /* Títulos do rodapé em branco */
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color); /* Linha de destaque do rodapé em vermelho sutil */
+    border-radius: 2px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links li a {
+    color: #BBBBBB; /* Links do rodapé em cinza claro */
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--text-light); /* Hover dos links do rodapé em branco */
+}
+
+.map-placeholder {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Sombra mais escura */
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 30px;
+}
+
+.copyright-line {
+    color: #999999; /* Texto de copyright em cinza */
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .hero-content h1 { font-size: 3.8em; }
+    .hero-content p { font-size: 1.3em; }
+
+    .about-grid, .about-content { grid-template-columns: 1fr; text-align: center; }
+    .about-image { order: -1; margin-bottom: 40px; } /* Imagem acima do texto em mobile */
+    .about-content img { margin-bottom: 40px; }
+
+    .pizza-grid, .menu-grid, .menu-list-simple, .footer-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .pizza-item img { height: 220px; }
+    .menu-item { flex-direction: column; text-align: center; }
+    .menu-item img { width: 100%; height: 180px; border-radius: 10px 10px 0 0; }
+    .item-details { padding: 15px; }
+    .item-details h3 { margin-top: 10px; }
+}
+
+@media (max-width: 768px) {
+    header .container { flex-direction: column; gap: 10px; } /* MODIFICADO: Reduzido de 15px para 10px */
+    .nav-links { gap: 15px; } /* MODIFICADO: Reduzido de 20px para 15px */
+    .logo { margin-bottom: 10px; }
+    .logo .small-logo { height: 50px; width: auto; margin-right: 15px; } /* Ajuste para mobile, largura automática */
+    .logo { font-size: 1.8em; } /* MODIFICADO: Ajuste para mobile */
+    .nav-links li a { font-size: 0.9em; } /* MODIFICADO: Ajuste para mobile */
+
+    .hero-content h1 { font-size: 3em; }
+    .hero-content p { font-size: 1.1em; }
+    .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
+    .hero-buttons .btn { margin: 0; }
+
+    .section-heading { font-size: 2.5em; margin-bottom: 40px; }
+    .section-heading {
+        padding-top: 20px; /* MODIFICADO: Ajuste para mobile */
+        margin-top: -20px; /* MODIFICADO: Ajuste para mobile */
+    }
+
+    .contact-form { padding: 30px; }
+}
+
+@media (max-width: 480px) {
+    .logo { font-size: 1.6em; } /* MODIFICADO: Ajuste para mobile menor */
+    .logo .small-logo { height: 40px; width: auto; margin-right: 10px; } /* Ajuste para mobile menor, largura automática */
+    .nav-links { flex-wrap: wrap; justify-content: center; }
+    .nav-links li a { font-size: 1em; }
+
+    .hero-content h1 { font-size: 2.5em; }
+    .hero-content p { font-size: 0.95em; }
+
+    .section-heading { font-size: 2em; }
+
+    .pizza-item img { height: 180px; }
+    .pizza-item h3 { font-size: 1.6em; }
+    .pizza-price { font-size: 1.3em; }
+
+    .menu-item img { height: 150px; }
+    .item-details h3 { font-size: 1.5em; }
+    .item-price { font-size: 1.2em; }
+
+    .list-item h3 { font-size: 1.4em; }
+
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .footer-col .footer-logo { margin: 0 auto 15px; }
+    .footer-contact { text-align: center; }
+    .social-links { justify-content: center; }
+    .footer-heading::after { left: 50%; transform: translateX(-50%); }
+}

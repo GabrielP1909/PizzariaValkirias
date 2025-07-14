@@ -1,0 +1,268 @@
+/* --- Customer Reviews Section --- */
+.customer-reviews-section {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.customer-reviews-section .section-heading {
+    color: var(--text-light);
+}
+
+.customer-reviews-section .section-heading::after {
+    background-color: var(--primary-color);
+}
+
+.section-description {
+    font-size: 1.1em; /* Ligeiramente menor */
+    margin-bottom: 40px; /* Menor margem */
+    color: var(--secondary-color);
+}
+
+/* Review Form */
+.review-form-container {
+    max-width: 600px; /* Reduzido */
+    margin: 0 auto 60px; /* Margem menor */
+    background-color: var(--footer-bg); /* Fundo mais escuro para o formulário */
+    padding: 30px; /* Reduzido */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Sombra mais escura */
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.1); /* Borda sutil */
+}
+
+.review-form-container h3 {
+    color: var(--text-light); /* Título do formulário em branco */
+    margin-bottom: 25px; /* Reduzido */
+    text-align: center;
+    font-size: 2em; /* Reduzido */
+}
+
+.review-form .form-group {
+    margin-bottom: 18px; /* Reduzido */
+}
+
+.review-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px; /* Reduzido */
+    color: var(--secondary-color); /* Labels em cinza claro */
+    font-size: 0.95em;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+    width: 100%;
+    padding: 10px; /* Reduzido */
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 0.95em; /* Reduzido */
+    color: var(--text-light); /* Texto dos inputs em branco */
+    background-color: rgba(255,255,255,0.05); /* Fundo dos inputs mais escuro e transparente */
+}
+
+.review-form textarea {
+    resize: vertical;
+    min-height: 80px; /* Reduzido */
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    font-size: 2em; /* Reduzido */
+    color: var(--secondary-color); /* Estrelas vazias */
+    cursor: pointer;
+    margin-top: 8px; /* Reduzido */
+    margin-bottom: 18px; /* Reduzido */
+}
+
+.star-rating i {
+    transition: color 0.2s ease;
+    margin: 0 3px; /* Reduzido */
+}
+
+.star-rating i.fas {
+    color: var(--primary-color); /* Estrelas preenchidas */
+}
+
+.star-rating i:hover {
+    color: var(--primary-color);
+}
+
+.review-form .btn {
+    width: 100%;
+    padding: 12px; /* Reduzido */
+    font-size: 1em; /* Reduzido */
+}
+
+/* Review Filter Menu */
+.review-filter-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduzido */
+    margin-bottom: 30px; /* Reduzido */
+}
+
+.review-filter-menu button {
+    background-color: rgba(255,255,255,0.08); /* Fundo mais escuro e transparente */
+    color: var(--secondary-color); /* Texto em cinza claro */
+    border: 1px solid rgba(255,255,255,0.15); /* Borda mais sutil */
+    padding: 8px 18px; /* Reduzido */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em; /* Reduzido */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.review-filter-menu button:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: var(--primary-color);
+    color: var(--text-light); /* Texto branco no hover */
+}
+
+.review-filter-menu button.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+/* Existing Reviews Display */
+.existing-reviews {
+    margin-top: 50px; /* Reduzido */
+}
+
+.existing-reviews h3 {
+    color: var(--text-light);
+    margin-bottom: 30px; /* Reduzido */
+    font-size: 2.2em; /* Reduzido */
+    text-align: center;
+}
+
+/* Carrossel/Grid de Avaliações */
+.review-carousel-container {
+    /* Adicione estilos para um carrossel aqui se for implementar um */
+    /* Por enquanto, apenas um contêiner para o grid */
+    max-width: 1000px; /* Limita a largura do contêiner de avaliações */
+    margin: 0 auto; /* Centraliza */
+}
+
+.review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Min-width menor para mais colunas */
+    gap: 20px; /* Reduzido para compactar */
+}
+
+.review-item {
+    background-color: rgba(255,255,255,0.05); /* Fundo mais escuro e transparente */
+    padding: 25px; /* Reduzido */
+    border-radius: 8px; /* Borda mais suave */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* Sombra mais sutil */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.08); /* Borda sutil */
+}
+
+.review-item:hover {
+    transform: translateY(-5px); /* Menor elevação no hover */
+}
+
+.review-item.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.review-item .review-header {
+    display: block; /* Muda para block para nome e estrelas em linhas separadas */
+    margin-bottom: 10px; /* Reduzido */
+}
+
+.review-item h4 {
+    font-size: 1.2em; /* Reduzido */
+    color: var(--primary-color);
+    margin: 0 0 5px 0; /* Ajuste de margem */
+}
+
+.review-item .star-display {
+    color: var(--primary-color);
+    font-size: 1em; /* Reduzido */
+    display: block; /* Garante que as estrelas fiquem abaixo do nome */
+}
+
+.review-item .star-display .far {
+    color: var(--secondary-color);
+}
+
+.review-item p {
+    font-style: italic;
+    margin-bottom: 12px; /* Reduzido */
+    color: var(--text-light);
+    font-size: 0.95em; /* Reduzido */
+}
+
+.review-item .review-date {
+    font-size: 0.8em; /* Reduzido */
+    color: var(--secondary-color);
+    display: block;
+    text-align: right;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .review-form-container {
+        padding: 25px;
+        max-width: 90%; /* Mais largura em telas menores */
+    }
+    .star-rating {
+        font-size: 1.8em;
+    }
+    .review-item h4 {
+        font-size: 1.1em;
+    }
+    .review-item .star-display {
+        font-size: 0.9em;
+    }
+    .review-filter-menu {
+        gap: 8px;
+    }
+    .review-filter-menu button {
+        padding: 7px 12px;
+        font-size: 0.85em;
+    }
+    .review-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste para telas menores */
+        gap: 15px;
+    }
+    .review-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-description {
+        font-size: 0.9em;
+        margin-bottom: 25px;
+    }
+    .review-form-container h3 {
+        font-size: 1.6em;
+    }
+    .star-rating {
+        font-size: 1.6em;
+    }
+    .review-item p {
+        font-size: 0.9em;
+    }
+    .review-filter-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-filter-menu button {
+        width: 90%; /* Botões de filtro ocupam mais largura */
+        max-width: 200px; /* Limite para não ficarem muito grandes */
+    }
+    .review-list {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        gap: 15px;
+    }
+}

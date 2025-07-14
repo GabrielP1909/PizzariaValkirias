@@ -1,0 +1,34 @@
+/* --- About Section --- */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-content h3 {
+    font-size: 2.2em;
+    color: var(--text-light);
+    margin-top: 30px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.about-content ul li {
+    color: var(--text-light);
+}
+
+.about-content ul li i {
+    color: var(--primary-color);
+}

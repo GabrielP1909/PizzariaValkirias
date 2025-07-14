@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Vesuvio - A Verdadeira Pizza Napolitana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reviews.css"> <!-- NOVO: CSS para avaliações -->
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts (Playfair Display e Lora) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#hero" class="logo">
+                <img src="imagens/logo.png" alt="Logo Pequena" class="small-logo">
+                Valkirias
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Início</a></li>
+                    <li><a href="menu.html">Cardápio</a></li>
+                    <li><a href="#about-full">Sobre Nós</a></li>
+                    <li><a href="#customer-reviews">Avaliações</a></li>
+                    <li><a href="#contact-full">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Imagem de Fundo Imersiva -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content container">
+            <h1>A Arte da Pizza, Elevada ao Seu Mais Alto Padrão</h1>
+            <p>Excelência em cada detalhe: pizzas feitas para paladares de alto padrão.</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn">Ver Cardápio</a>
+                <a href="#contact-full" class="btn btn-outline">Fazer Pedido</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Preview Section -->
+    <section id="about-preview" class="about-preview-section">
+        <div class="container">
+            <h2 class="section-heading">Nossa História, Nosso Sabor</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Na Pizzaria Vesuvio, cada pizza é uma obra de arte, seguindo rigorosamente as tradições da Associazione Verace Pizza Napolitana (AVPN). Utilizamos apenas farinha italiana tipo '00', tomate San Marzano e Mozzarella di Bufala Campana DOP, assados em forno a lenha a 450°C.</p>
+                    <p>Nossa paixão é trazer um pedaço de Nápoles para sua mesa, com a crosta perfeita, o molho vibrante e o aroma inconfundível que só a verdadeira pizza napolitana pode oferecer.</p>
+                    <a href="#about-full" class="btn btn-outline">Saiba Mais Sobre Nós</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/600x400?text=Pizzaiolo+Fazendo+Pizza" alt="Pizzaiolo preparando pizza no forno a lenha">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="customer-reviews" class="customer-reviews-section">
+        <div class="container">
+            <h2 class="section-heading">Avaliações dos Clientes</h2>
+            <p class="section-description">Compartilhe sua experiência e ajude-nos a melhorar!</p>
+
+            <div class="review-form-container">
+                <h3>Deixe sua Avaliação</h3>
+                <form class="review-form">
+                    <div class="form-group">
+                        <label for="reviewer-name">Seu Nome:</label>
+                        <input type="text" id="reviewer-name" name="reviewer-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Sua Avaliação:</label>
+                        <div class="star-rating" id="rating">
+                            <i class="far fa-star" data-value="1"></i>
+                            <i class="far fa-star" data-value="2"></i>
+                            <i class="far fa-star" data-value="3"></i>
+                            <i class="far fa-star" data-value="4"></i>
+                            <i class="far fa-star" data-value="5"></i>
+                            <input type="hidden" name="rating-value" id="rating-value" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-comment">Seu Comentário:</label>
+                        <textarea id="review-comment" name="review-comment" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar Avaliação</button>
+                </form>
+            </div>
+
+            <div class="existing-reviews">
+                <h3>O Que Nossos Clientes Dizem</h3>
+
+                <!-- Review Filter Menu -->
+                <div class="review-filter-menu">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="5">5 Estrelas</button>
+                    <button class="filter-btn" data-filter="4">4 Estrelas</button>
+                    <button class="filter-btn" data-filter="3">3 Estrelas</button>
+                    <button class="filter-btn" data-filter="2">2 Estrelas</button>
+                    <button class="filter-btn" data-filter="1">1 Estrela</button>
+                </div>
+
+                <!-- Container para o carrossel de avaliações ou grid compacto -->
+                <div class="review-carousel-container">
+                    <div class="review-list">
+                        <!-- Exemplo de Avaliação (seria populado por um backend) -->
+                        <!-- Adicionado data-rating para filtragem -->
+                        <div class="review-item" data-rating="5">
+                            <div class="review-header">
+                                <h4>Ana Paula S.</h4>
+                                <div class="star-display">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"A melhor pizza napolitana que já comi fora da Itália! Ingredientes frescos e sabor inigualável."</p>
+                            <span class="review-date">20 de Outubro, 2023</span>
+                        </div>
+
+                        <div class="review-item" data-rating="4">
+                            <div class="review-header">
+                                <h4>João Carlos M.</h4>
+                                <div class="star-display">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Ambiente acolhedor e pizzas divinas. A Margherita é simplesmente perfeita. Recomendo!"</p>
+                            <span class="review-date">18 de Outubro, 2023</span>
+                        </div>
+
+                        <div class="review-item" data-rating="5">
+                            <div class="review-header">
+                                <h4>Mariana L.</h4>
+                                <div class="star-display">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Qualidade premium em cada mordida. A Vesuvio se tornou minha pizzaria favorita em São Paulo."</p>
+                            <span class="review-date">15 de Outubro, 2023</span>
+                        </div>
+
+                        <div class="review-item" data-rating="3">
+                            <div class="review-header">
+                                <h4>Pedro R.</h4>
+                                <div class="star-display">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Pizza boa, mas o tempo de espera foi um pouco longo. O sabor compensou no final."</p>
+                            <span class="review-date">10 de Outubro, 2023</span>
+                        </div>
+
+                        <div class="review-item" data-rating="5">
+                            <div class="review-header">
+                                <h4>Carla V.</h4>
+                                <div class="star-display">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Experiência impecável do início ao fim. A pizza é autêntica e o atendimento excelente!"</p>
+                            <span class="review-date">05 de Outubro, 2023</span>
+                        </div>
+
+                        <div class="review-item" data-rating="2">
+                            <div class="review-header">
+                                <h4>Fernando G.</h4>
+                                <div class="star-display">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Achei a pizza um pouco fria na entrega. O sabor é bom, mas a temperatura deixou a desejar."</p>
+                            <span class="review-date">01 de Outubro, 2023</span>
+                        </div>
+
+                        <div class="review-item" data-rating="1">
+                            <div class="review-header">
+                                <h4>Beatriz F.</h4>
+                                <div class="star-display">
+                                    <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"Não gostei da massa, muito fina para o meu gosto. Esperava algo diferente."</p>
+                            <span class="review-date">28 de Setembro, 2023</span>
+                        </div>
+
+                        <!-- Fim dos exemplos -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Conteúdo de contato.html) -->
+    <section id="contact-full" class="contact-details-section">
+        <div class="container">
+            <h2 class="section-heading">Fale Conosco</h2>
+            <p style="text-align: center; margin-bottom: 60px; color: var(--text-light);">Estamos prontos para atender suas dúvidas, sugestões ou pedidos especiais.</p>
+
+            <h2 class="section-heading">Informações de Contato</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> **E-mail:** contato@pizzariavesuvio.com</p>
+                <p><i class="fas fa-phone-alt"></i> **Telefone:** 11 3045-6789</p>
+                <p><i class="fas fa-map-marker-alt"></i> **Endereço:** Rua das Massas, 185 - Jardim Itália, São Paulo - SP</p>
+            </div>
+
+            <h2 class="section-heading" style="margin-top: 80px;">Envie-nos uma Mensagem</h2>
+            <form class="contact-form">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Assunto:</label>
+                <input type="text" id="subject" name="subject">
+
+                <label for="message">Sua Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#hero" class="footer-logo">Valkirias</a>
+                    <p class="footer-description">A excelência da verdadeira pizza napolitana em sua versão mais premium e sofisticada.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> contato@pizzariavesuvio.com</p>
+                        <p><i class="fas fa-phone-alt"></i> 11 3045-6789</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Horários</h3>
+                    <ul class="footer-links">
+                        <li>Terça a Quinta: 18h - 23h</li>
+                        <li>Sexta e Sábado: 18h - 00h</li>
+                        <li>Domingo: 18h - 22h</li>
+                        <li>Segunda: Fechado</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="menu.html">Cardápio</a></li>
+                        <li><a href="#about-full">Sobre Nós</a></li>
+                        <li><a href="#contact-full">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Localização</h3>
+                    <p>Rua das Massas, 185</p>
+                    <p>Jardim Itália - São Paulo</p>
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0900000000003!2d-46.6539599!3d-23.563090000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2sRua%20das%20Massas%2C%20185%20-%20Jardim%20It%C3%A1lia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001400-000!5e0!3m2!1spt-BR!2sbr!4v1678901234567!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright-line">© 2023 Pizzaria Vesuvio. Todos os direitos reservados. AVPN Certified®</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Star Rating Functionality ---
+            const starRating = document.getElementById('rating');
+            const stars = starRating.querySelectorAll('.fa-star');
+            const ratingValueInput = document.getElementById('rating-value');
+
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const value = parseInt(this.dataset.value);
+                    ratingValueInput.value = value;
+                    highlightStars(value);
+                });
+
+                star.addEventListener('mouseover', function() {
+                    const value = parseInt(this.dataset.value);
+                    highlightStars(value, true);
+                });
+
+                star.addEventListener('mouseout', function() {
+                    highlightStars(parseInt(ratingValueInput.value));
+                });
+            });
+
+            function highlightStars(value) {
+                stars.forEach(star => {
+                    const starValue = parseInt(star.dataset.value);
+                    if (starValue <= value) {
+                        star.classList.remove('far');
+                        star.classList.add('fas');
+                    } else {
+                        star.classList.remove('fas');
+                        star.classList.add('far');
+                    }
+                });
+            }
+
+            // --- Form Submission (Simulated) ---
+            const reviewForm = document.querySelector('.review-form');
+            reviewForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('reviewer-name').value;
+                const rating = parseInt(document.getElementById('rating-value').value);
+                const comment = document.getElementById('review-comment').value;
+
+                if (name && rating > 0 && comment) {
+                    // Simulate adding a new review to the list
+                    const reviewList = document.querySelector('.review-list');
+                    const newReviewItem = document.createElement('div');
+                    newReviewItem.classList.add('review-item');
+                    newReviewItem.dataset.rating = rating; // Set data-rating for filtering
+
+                    let starHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        starHtml += `<i class="${i <= rating ? 'fas' : 'far'} fa-star"></i>`;
+                    }
+
+                    const currentDate = new Date();
+                    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                    const formattedDate = currentDate.toLocaleDateString('pt-BR', options);
+
+                    newReviewItem.innerHTML = `
+                        <div class="review-header">
+                            <h4>${name}</h4>
+                            <div class="star-display">
+                                ${starHtml}
+                            </div>
+                        </div>
+                        <p>"${comment}"</p>
+                        <span class="review-date">${formattedDate}</span>
+                    `;
+                    reviewList.prepend(newReviewItem); // Add new review to the top
+
+                    alert(`Avaliação enviada!\nNome: ${name}\nEstrelas: ${rating}\nComentário: ${comment}\n\n(Em um site real, isso seria salvo em um banco de dados.)`);
+                    reviewForm.reset();
+                    ratingValueInput.value = 0;
+                    highlightStars(0);
+
+                    // After adding a new review, re-apply the current filter
+                    const activeFilter = document.querySelector('.filter-btn.active');
+                    if (activeFilter) {
+                        filterReviews(activeFilter.dataset.filter);
+                    }
+
+                } else {
+                    alert('Por favor, preencha todos os campos e selecione uma avaliação.');
+                }
+            });
+
+            // --- Review Filtering Functionality ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            // Get all review items initially
+            const allReviewItems = document.querySelectorAll('.review-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.dataset.filter;
+                    filterReviews(filterValue);
+                });
+            });
+
+            function filterReviews(filterValue) {
+                allReviewItems.forEach(item => { // Use allReviewItems here
+                    const itemRating = item.dataset.rating;
+                    if (filterValue === 'all' || itemRating === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Initial filter application (show all reviews on page load)
+            filterReviews('all');
+        });
+    </script>
+</body>
+</html>
