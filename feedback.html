@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações - Pizzaria Valkirias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.png" alt="Logo Pequena" class="small-logo">
+                Valkirias
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="menu.html">Cardápio</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="feedback.html" class="active">Avaliações</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <!-- Os links de Login/Criar Conta serão adicionados/removidos dinamicamente pelo JS -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header Section for Reviews -->
+    <section id="page-header-reviews" class="page-header-section">
+        <div class="container">
+            <h1>O Que Nossos Clientes Dizem</h1>
+            <p>Sua opinião é muito importante para nós! Compartilhe sua experiência.</p>
+        </div>
+    </section>
+
+    <section id="customer-reviews-full" class="customer-reviews-section">
+        <div class="container">
+            <h2 class="section-heading">Deixe Sua Avaliação</h2>
+
+            <div class="review-form-container">
+                <form class="review-form">
+                    <div class="form-group">
+                        <label for="reviewer-name">Seu Nome:</label>
+                        <input type="text" id="reviewer-name" name="reviewer-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Sua Avaliação:</label>
+                        <div class="star-rating" id="rating">
+                            <i class="far fa-star" data-value="1"></i>
+                            <i class="far fa-star" data-value="2"></i>
+                            <i class="far fa-star" data-value="3"></i>
+                            <i class="far fa-star" data-value="4"></i>
+                            <i class="far fa-star" data-value="5"></i>
+                            <input type="hidden" name="rating-value" id="rating-value" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-comment">Seu Comentário:</label>
+                        <textarea id="review-comment" name="review-comment" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar Avaliação</button>
+                </form>
+            </div>
+
+            <h2 class="section-heading">Avaliações Recentes</h2>
+
+            <div class="review-filter-menu">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="5">5 Estrelas</button>
+                <button class="filter-btn" data-filter="4">4 Estrelas</button>
+                <button class="filter-btn" data-filter="3">3 Estrelas</button>
+                <button class="filter-btn" data-filter="2">2 Estrelas</button>
+                <button class="filter-btn" data-filter="1">1 Estrela</button>
+            </div>
+
+            <div class="review-list-grid">
+                <!-- Avaliações serão carregadas aqui -->
+                <div class="review-item" data-rating="5">
+                    <div class="review-header">
+                        <h4>Ana Paula S.</h4>
+                        <div class="star-display">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"A melhor pizza napolitana que já comi fora da Itália! Ingredientes frescos e sabor inigualável."</p>
+                    <span class="review-date">20 de Outubro, 2023</span>
+                </div>
+
+                <div class="review-item" data-rating="4">
+                    <div class="review-header">
+                        <h4>João Carlos M.</h4>
+                        <div class="star-display">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Ambiente acolhedor e pizzas divinas. A Margherita é simplesmente perfeita. Recomendo!"</p>
+                    <span class="review-date">18 de Outubro, 2023</span>
+                </div>
+
+                <div class="review-item" data-rating="5">
+                    <div class="review-header">
+                        <h4>Mariana L.</h4>
+                        <div class="star-display">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Qualidade premium em cada mordida. A Valkirias se tornou minha pizzaria favorita em São Paulo."</p>
+                    <span class="review-date">15 de Outubro, 2023</span>
+                </div>
+
+                <div class="review-item" data-rating="3">
+                    <div class="review-header">
+                        <h4>Pedro R.</h4>
+                        <div class="star-display">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Pizza boa, mas o tempo de espera foi um pouco longo. O sabor compensou no final."</p>
+                    <span class="review-date">10 de Outubro, 2023</span>
+                </div>
+
+                <div class="review-item" data-rating="5">
+                    <div class="review-header">
+                        <h4>Carla V.</h4>
+                        <div class="star-display">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Experiência impecável do início ao fim. A pizza é autêntica e o atendimento excelente!"</p>
+                    <span class="review-date">05 de Outubro, 2023</span>
+                </div>
+
+                <div class="review-item" data-rating="2">
+                    <div class="review-header">
+                        <h4>Fernando G.</h4>
+                        <div class="star-display">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Achei a pizza um pouco fria na entrega. O sabor é bom, mas a temperatura deixou a desejar."</p>
+                    <span class="review-date">01 de Outubro, 2023</span>
+                </div>
+
+                <div class="review-item" data-rating="1">
+                    <div class="review-header">
+                        <h4>Beatriz F.</h4>
+                        <div class="star-display">
+                            <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Não gostei da massa, muito fina para o meu gosto. Esperava algo diferente."</p>
+                    <span class="review-date">28 de Setembro, 2023</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">Valkirias</a>
+                    <p class="footer-description">A excelência da verdadeira pizza napolitana em sua versão mais premium e sofisticada.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> contato@pizzariavesuvio.com</p>
+                        <p><i class="fas fa-phone-alt"></i> 11 3045-6789</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Horários</h3>
+                    <ul class="footer-links">
+                        <li>Terça a Quinta: 18h - 23h</li>
+                        <li>Sexta e Sábado: 18h - 00h</li>
+                        <li>Domingo: 18h - 22h</li>
+                        <li>Segunda: Fechado</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="menu.html">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="feedback.html">Avaliações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <!-- Os links de Login/Criar Conta serão adicionados/removidos dinamicamente pelo JS -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Localização</h3>
+                    <p>Rua Tiradentes, 297</p>
+                    <p>Dihel - Sapucaia do Sul - RS</p>
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.9000000000005!2d-51.14999999999999!3d-29.820689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951969ea50b9a57f%3A0x55cecc22069e7998!2sRua%20Tiradentes%2C%20297%20-%20Dihel%2C%20Sapucaia%20do%20Sul%20-%20RS%2C%2093210-000%2C%20Brazil!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright-line">© 2023 Pizzaria Valkirias. Todos os direitos reservados. AVPN Certified®</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAtpJ3z7RCdBQEDQaX062owqmrb4rlmUkg",
+        authDomain: "valkirias-a6368.firebaseapp.com",
+        projectId: "valkirias-a6368",
+        storageBucket: "valkirias-a6368.firebasestorage.app",
+        messagingSenderId: "463640322272",
+        appId: "1:463640322272:web:bb973c0a749c0232fc3085",
+        measurementId: "G-880ZBZ90S1"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      // Make auth available globally if needed by auth.js, or pass it
+      window.firebaseAuth = auth;
+      window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+      window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+      window.signOut = signOut;
+      window.onAuthStateChanged = onAuthStateChanged;
+    </script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Star Rating Functionality ---
+            const starRating = document.getElementById('rating');
+            const stars = starRating.querySelectorAll('.fa-star');
+            const ratingValueInput = document.getElementById('rating-value');
+
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const value = parseInt(this.dataset.value);
+                    ratingValueInput.value = value;
+                    highlightStars(value);
+                });
+
+                star.addEventListener('mouseover', function() {
+                    const value = parseInt(this.dataset.value);
+                    highlightStars(value, true);
+                });
+
+                star.addEventListener('mouseout', function() {
+                    highlightStars(parseInt(ratingValueInput.value));
+                });
+            });
+
+            function highlightStars(value) {
+                stars.forEach(star => {
+                    const starValue = parseInt(star.dataset.value);
+                    if (starValue <= value) {
+                        star.classList.remove('far');
+                        star.classList.add('fas');
+                    } else {
+                        star.classList.remove('fas');
+                        star.classList.add('far');
+                    }
+                });
+            }
+
+            // --- Form Submission (Simulated) ---
+            const reviewForm = document.querySelector('.review-form');
+            reviewForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('reviewer-name').value;
+                const rating = parseInt(document.getElementById('rating-value').value);
+                const comment = document.getElementById('review-comment').value;
+
+                if (name && rating > 0 && comment) {
+                    // Simulate adding a new review to the list
+                    const reviewList = document.querySelector('.review-list-grid');
+                    const newReviewItem = document.createElement('div');
+                    newReviewItem.classList.add('review-item');
+                    newReviewItem.dataset.rating = rating; // Set data-rating for filtering
+
+                    let starHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        starHtml += `<i class="${i <= rating ? 'fas' : 'far'} fa-star"></i>`;
+                    }
+
+                    const currentDate = new Date();
+                    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                    const formattedDate = currentDate.toLocaleDateString('pt-BR', options);
+
+                    newReviewItem.innerHTML = `
+                        <div class="review-header">
+                            <h4>${name}</h4>
+                            <div class="star-display">
+                                ${starHtml}
+                            </div>
+                        </div>
+                        <p>"${comment}"</p>
+                        <span class="review-date">${formattedDate}</span>
+                    `;
+                    reviewList.prepend(newReviewItem); // Add new review to the top
+
+                    alert(`Avaliação enviada!\nNome: ${name}\nEstrelas: ${rating}\nComentário: ${comment}\n\n(Em um site real, isso seria salvo em um banco de dados.)`);
+                    reviewForm.reset();
+                    ratingValueInput.value = 0;
+                    highlightStars(0);
+
+                    // After adding a new review, re-apply the current filter
+                    const activeFilter = document.querySelector('.filter-btn.active');
+                    if (activeFilter) {
+                        filterReviews(activeFilter.dataset.filter);
+                    }
+
+                } else {
+                    alert('Por favor, preencha todos os campos e selecione uma avaliação.');
+                }
+            });
+
+            // --- Review Filtering Functionality ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            // Get all review items initially
+            const allReviewItems = document.querySelectorAll('.review-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.dataset.filter;
+                    filterReviews(filterValue);
+                });
+            });
+
+            function filterReviews(filterValue) {
+                allReviewItems.forEach(item => { // Use allReviewItems here
+                    const itemRating = item.dataset.rating;
+                    if (filterValue === 'all' || itemRating === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Initial filter application (show all reviews on page load)
+            filterReviews('all');
+        });
+    </script>
+</body>
+</html>

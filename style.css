@@ -418,46 +418,6 @@ header .container {
     font-size: 1.2em;
 }
 
-.contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: var(--light-bg); /* Fundo do formulário em branco */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra mais escura */
-}
-
-.contact-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: var(--dark-bg); /* Labels do formulário em preto */
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 1em;
-    color: var(--dark-bg); /* Texto dos inputs em preto */
-    background-color: var(--text-light); /* Fundo dos inputs em branco */
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.contact-form .btn {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1em;
-}
-
 
 /* --- Menu Categories Section (menu.html) --- */
 .menu-categories-section {
@@ -704,7 +664,7 @@ footer {
         margin-top: -20px; /* MODIFICADO: Ajuste para mobile */
     }
 
-    .contact-form { padding: 30px; }
+    
 }
 
 @media (max-width: 480px) {

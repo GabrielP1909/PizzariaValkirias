@@ -3,76 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria Valkirias - A Verdadeira Pizza Napolitana</title>
+    <title>Criar Conta - Pizzaria Valkirias</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/index.css">
-    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="css/login_register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts (Playfair Display e Lora) -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="#hero" class="logo">
+            <a href="index.html" class="logo">
                 <img src="imagens/logo.png" alt="Logo Pequena" class="small-logo">
                 Valkirias
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#hero" class="active">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="menu.html">Cardápio</a></li>
-                    <li><a href="#about-full">Sobre Nós</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
                     <li><a href="feedback.html">Avaliações</a></li>
-                    <li><a href="#contact-full">Contato</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                     <!-- Os links de Login/Criar Conta serão adicionados/removidos dinamicamente pelo JS -->
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section - Imagem de Fundo Imersiva -->
-    <section id="hero" class="hero-section">
-        <div class="hero-content container">
-            <h1>A Arte da Pizza, Elevada ao Seu Mais Alto Padrão</h1>
-            <p>Excelência em cada detalhe: pizzas feitas para paladares de alto padrão.</p>
-            <div class="hero-buttons">
-                <a href="menu.html" class="btn">Ver Cardápio</a>
-                <a href="#contact-full" class="btn btn-outline">Fazer Pedido</a>
-            </div>
+    <section id="auth-section" class="page-header-section">
+        <div class="container">
+            <h1>Crie Sua Conta</h1>
+            <p>Junte-se à família Valkirias e desfrute de benefícios exclusivos.</p>
         </div>
     </section>
 
-    <!-- About Us Preview Section -->
-    <section id="about-preview" class="about-preview-section">
+    <section id="register-form-section">
         <div class="container">
-            <h2 class="section-heading">Nossa História, Nosso Sabor</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Na Pizzaria Valkirias, cada pizza é uma obra de arte, seguindo rigorosamente as tradições da Associazione Verace Pizza Napoletana (AVPN). Utilizamos apenas farinha italiana tipo '00', tomate San Marzano e Mozzarella di Bufala Campana DOP, assados em forno a lenha a 450°C.</p>
-                    <p>Nossa paixão é trazer um pedaço de Nápoles para sua mesa, com a crosta perfeita, o molho vibrante e o aroma inconfundível que só a verdadeira pizza napolitana pode oferecer.</p>
-                    <a href="sobre.html" class="btn btn-outline">Saiba Mais Sobre Nós</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/600x400?text=Pizzaiolo+Fazendo+Pizza" alt="Pizzaiolo preparando pizza no forno a lenha">
-                </div>
+            <div class="auth-form-container">
+                <h2 class="section-heading">Criar Nova Conta</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">Nome Completo:</label>
+                        <input type="text" id="registerName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">E-mail:</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Senha:</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar Senha:</label>
+                        <input type="password" id="confirmPassword" name="confirm_password" required>
+                    </div>
+                    <button type="submit" class="btn">Registrar</button>
+                    <p class="auth-link">Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+                </form>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section (Conteúdo de contato.html) -->
-    <section id="contact-full" class="contact-details-section">
-        <div class="container">
-            <h2 class="section-heading">Fale Conosco</h2>
-            <p style="text-align: center; margin-bottom: 60px; color: var(--text-light);">Estamos prontos para atender suas dúvidas, sugestões ou pedidos especiais.</p>
-
-            <h2 class="section-heading">Informações de Contato</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> **E-mail:** contato@pizzariavesuvio.com</p>
-                <p><i class="fas fa-phone-alt"></i> **Telefone:**  51 3782-5157</p>
-                <p><i class="fas fa-map-marker-alt"></i> **Endereço:** Rua Tiradentes, 297 - Dihel, Sapucaia do Sul - RS</p>
-            </div>
-            
         </div>
     </section>
 
@@ -80,11 +68,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#hero" class="footer-logo">Valkirias</a>
+                    <a href="index.html" class="footer-logo">Valkirias</a>
                     <p class="footer-description">A excelência da verdadeira pizza napolitana em sua versão mais premium e sofisticada.</p>
                     <div class="footer-contact">
                         <p><i class="fas fa-envelope"></i> contato@pizzariavesuvio.com</p>
-                        <p><i class="fas fa-phone-alt"></i> 51 3782-5157 </p>
+                        <p><i class="fas fa-phone-alt"></i> 11 3045-6789</p>
                     </div>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -95,18 +83,20 @@
                 <div class="footer-col">
                     <h3 class="footer-heading">Horários</h3>
                     <ul class="footer-links">
-                        <li>Terça a Domingo: 18h - 22:45h</li>
-                        <li>Não abrimos na Segunda.</li>
+                        <li>Terça a Quinta: 18h - 23h</li>
+                        <li>Sexta e Sábado: 18h - 00h</li>
+                        <li>Domingo: 18h - 22h</li>
+                        <li>Segunda: Fechado</li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3 class="footer-heading">Links Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="#hero">Início</a></li>
+                        <li><a href="index.html">Início</a></li>
                         <li><a href="menu.html">Cardápio</a></li>
                         <li><a href="sobre.html">Sobre Nós</a></li>
                         <li><a href="feedback.html">Avaliações</a></li>
-                        <li><a href="#contact-full">Contato</a></li>
+                        <li><a href="contato.html">Contato</a></li>
                         <!-- Os links de Login/Criar Conta serão adicionados/removidos dinamicamente pelo JS -->
                     </ul>
                 </div>

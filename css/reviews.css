@@ -3,10 +3,13 @@
     background-color: var(--dark-bg);
     color: var(--text-light);
     text-align: center;
+    padding: 60px 0; /* Ajuste de padding para ser mais compacto */
 }
 
 .customer-reviews-section .section-heading {
     color: var(--text-light);
+    font-size: 2.8em; /* Ligeiramente menor */
+    margin-bottom: 40px; /* Menor margem */
 }
 
 .customer-reviews-section .section-heading::after {
@@ -14,17 +17,17 @@
 }
 
 .section-description {
-    font-size: 1.1em; /* Ligeiramente menor */
-    margin-bottom: 40px; /* Menor margem */
+    font-size: 1em;
+    margin-bottom: 30px; /* Menor margem */
     color: var(--secondary-color);
 }
 
 /* Review Form */
 .review-form-container {
-    max-width: 600px; /* Reduzido */
-    margin: 0 auto 60px; /* Margem menor */
+    max-width: 550px; /* Reduzido para ser mais compacto */
+    margin: 0 auto 50px; /* Margem menor */
     background-color: var(--footer-bg); /* Fundo mais escuro para o formulário */
-    padding: 30px; /* Reduzido */
+    padding: 25px; /* Reduzido */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Sombra mais escura */
     text-align: left;
@@ -33,52 +36,52 @@
 
 .review-form-container h3 {
     color: var(--text-light); /* Título do formulário em branco */
-    margin-bottom: 25px; /* Reduzido */
+    margin-bottom: 20px; /* Reduzido */
     text-align: center;
-    font-size: 2em; /* Reduzido */
+    font-size: 1.8em; /* Reduzido */
 }
 
 .review-form .form-group {
-    margin-bottom: 18px; /* Reduzido */
+    margin-bottom: 15px; /* Reduzido */
 }
 
 .review-form label {
     display: block;
     font-weight: bold;
-    margin-bottom: 6px; /* Reduzido */
+    margin-bottom: 5px; /* Reduzido */
     color: var(--secondary-color); /* Labels em cinza claro */
-    font-size: 0.95em;
+    font-size: 0.9em;
 }
 
 .review-form input[type="text"],
 .review-form textarea {
     width: 100%;
-    padding: 10px; /* Reduzido */
+    padding: 8px; /* Reduzido */
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    font-size: 0.95em; /* Reduzido */
+    font-size: 0.9em; /* Reduzido */
     color: var(--text-light); /* Texto dos inputs em branco */
     background-color: rgba(255,255,255,0.05); /* Fundo dos inputs mais escuro e transparente */
 }
 
 .review-form textarea {
     resize: vertical;
-    min-height: 80px; /* Reduzido */
+    min-height: 70px; /* Reduzido */
 }
 
 .star-rating {
     display: flex;
     justify-content: center;
-    font-size: 2em; /* Reduzido */
+    font-size: 1.8em; /* Reduzido */
     color: var(--secondary-color); /* Estrelas vazias */
     cursor: pointer;
-    margin-top: 8px; /* Reduzido */
-    margin-bottom: 18px; /* Reduzido */
+    margin-top: 6px; /* Reduzido */
+    margin-bottom: 15px; /* Reduzido */
 }
 
 .star-rating i {
     transition: color 0.2s ease;
-    margin: 0 3px; /* Reduzido */
+    margin: 0 2px; /* Reduzido */
 }
 
 .star-rating i.fas {
@@ -91,8 +94,8 @@
 
 .review-form .btn {
     width: 100%;
-    padding: 12px; /* Reduzido */
-    font-size: 1em; /* Reduzido */
+    padding: 10px; /* Reduzido */
+    font-size: 0.95em; /* Reduzido */
 }
 
 /* Review Filter Menu */
@@ -100,18 +103,18 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px; /* Reduzido */
-    margin-bottom: 30px; /* Reduzido */
+    gap: 8px; /* Reduzido */
+    margin-bottom: 25px; /* Reduzido */
 }
 
 .review-filter-menu button {
     background-color: rgba(255,255,255,0.08); /* Fundo mais escuro e transparente */
     color: var(--secondary-color); /* Texto em cinza claro */
     border: 1px solid rgba(255,255,255,0.15); /* Borda mais sutil */
-    padding: 8px 18px; /* Reduzido */
+    padding: 7px 15px; /* Reduzido */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9em; /* Reduzido */
+    font-size: 0.85em; /* Reduzido */
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
@@ -130,38 +133,39 @@
 
 /* Existing Reviews Display */
 .existing-reviews {
-    margin-top: 50px; /* Reduzido */
+    margin-top: 40px; /* Reduzido */
 }
 
 .existing-reviews h3 {
     color: var(--text-light);
-    margin-bottom: 30px; /* Reduzido */
-    font-size: 2.2em; /* Reduzido */
+    margin-bottom: 25px; /* Reduzido */
+    font-size: 2em; /* Reduzido */
     text-align: center;
 }
 
-/* Carrossel/Grid de Avaliações */
+/* Grid de Avaliações */
 .review-carousel-container {
-    /* Adicione estilos para um carrossel aqui se for implementar um */
-    /* Por enquanto, apenas um contêiner para o grid */
-    max-width: 1000px; /* Limita a largura do contêiner de avaliações */
+    max-width: 900px; /* Limita a largura do contêiner de avaliações */
     margin: 0 auto; /* Centraliza */
 }
 
 .review-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Min-width menor para mais colunas */
-    gap: 20px; /* Reduzido para compactar */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Min-width menor para mais colunas */
+    gap: 15px; /* Reduzido para compactar */
 }
 
 .review-item {
     background-color: rgba(255,255,255,0.05); /* Fundo mais escuro e transparente */
-    padding: 25px; /* Reduzido */
+    padding: 20px; /* Reduzido */
     border-radius: 8px; /* Borda mais suave */
     box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* Sombra mais sutil */
     transition: transform 0.3s ease, opacity 0.3s ease;
     text-align: left;
     border: 1px solid rgba(255,255,255,0.08); /* Borda sutil */
+    display: flex; /* Usar flexbox para layout interno */
+    flex-direction: column;
+    justify-content: space-between; /* Empurra a data para baixo */
 }
 
 .review-item:hover {
@@ -174,20 +178,19 @@
 }
 
 .review-item .review-header {
-    display: block; /* Muda para block para nome e estrelas em linhas separadas */
-    margin-bottom: 10px; /* Reduzido */
+    margin-bottom: 8px; /* Reduzido */
 }
 
 .review-item h4 {
-    font-size: 1.2em; /* Reduzido */
+    font-size: 1.1em; /* Reduzido */
     color: var(--primary-color);
-    margin: 0 0 5px 0; /* Ajuste de margem */
+    margin: 0 0 3px 0; /* Ajuste de margem */
 }
 
 .review-item .star-display {
     color: var(--primary-color);
-    font-size: 1em; /* Reduzido */
-    display: block; /* Garante que as estrelas fiquem abaixo do nome */
+    font-size: 0.9em; /* Reduzido */
+    display: block;
 }
 
 .review-item .star-display .far {
@@ -196,73 +199,78 @@
 
 .review-item p {
     font-style: italic;
-    margin-bottom: 12px; /* Reduzido */
+    margin-bottom: 10px; /* Reduzido */
     color: var(--text-light);
-    font-size: 0.95em; /* Reduzido */
+    font-size: 0.9em; /* Reduzido */
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
 }
 
 .review-item .review-date {
-    font-size: 0.8em; /* Reduzido */
+    font-size: 0.75em; /* Reduzido */
     color: var(--secondary-color);
     display: block;
     text-align: right;
+    margin-top: auto; /* Empurra para o final do flex container */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .customer-reviews-section {
+        padding: 40px 0;
+    }
     .review-form-container {
-        padding: 25px;
-        max-width: 90%; /* Mais largura em telas menores */
+        padding: 20px;
+        max-width: 90%;
     }
     .star-rating {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .review-item h4 {
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .review-item .star-display {
-        font-size: 0.9em;
-    }
-    .review-filter-menu {
-        gap: 8px;
-    }
-    .review-filter-menu button {
-        padding: 7px 12px;
         font-size: 0.85em;
     }
+    .review-filter-menu {
+        gap: 6px;
+    }
+    .review-filter-menu button {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
     .review-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste para telas menores */
-        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajuste para telas menores */
+        gap: 12px;
     }
     .review-item {
-        padding: 20px;
+        padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .section-description {
-        font-size: 0.9em;
-        margin-bottom: 25px;
+        font-size: 0.85em;
+        margin-bottom: 20px;
     }
     .review-form-container h3 {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     .star-rating {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     .review-item p {
-        font-size: 0.9em;
+        font-size: 0.85em;
     }
     .review-filter-menu {
         flex-direction: column;
         align-items: center;
     }
     .review-filter-menu button {
-        width: 90%; /* Botões de filtro ocupam mais largura */
-        max-width: 200px; /* Limite para não ficarem muito grandes */
+        width: 90%;
+        max-width: 180px;
     }
     .review-list {
         grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
-        gap: 15px;
+        gap: 10px;
     }
 }
